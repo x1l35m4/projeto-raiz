@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Raiz Quadrada</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/lib/bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+  <header>
+    <div class="container-fluid ">
+      <div class="row bordertemp align-content-center justify-content-center">
+        <div class="col-12 bordertemp">
+          <h1 class="bordertemp text-center bg-dark text-white px-2 py-2">Raiz Quadrada</h1>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container-fluid ">
+      <div class="row justify-content- bordertemp">
+
+        <div class="col-12">
+          <div class="align-items-center justify-content-center">
+
+            <div class="input-number input-group bordertemp mb-3">
+              <label for="num-input-a" class="input-group-text">Número-A:</label>
+              <input id="num-input-a" type="number" placeholder="Entre com dividendo" class="input-value form-control">
+
+              <div class="msg text-danger w-100 d-none">
+                Este campo é obrigatório *
+              </div>
+
+            </div>
+
+            <div class="input-number input-group bordertemp mb-3">
+              <label for="num-input-b" class="input-group-text">Número-B:</label>
+              <input id="num-input-b" type="number" placeholder="Entre com divisor" class="input-value form-control">
+
+              <div class="msg text-danger w-100 d-none">
+                Este campo é obrigatório *
+              </div>
+            </div>
+
+            <div class="row align-items-center justify-content-center">
+              <div class="col-3 mb-3 text-center bordertemp">
+                <button id="btn-resolver" class="btn btn-primary">Resolver</button>
+              </div>
+
+              <div class="col-3 mb-3 text-center bordertemp">
+                <button id="btn-reset" class="btn btn-danger">reset</button>
+              </div>
+            </div>
+
+
+          </div>
+          <div class="input-group mb-3 bordertemp">
+            <label for="num-input-a" class="input-group-text">resultado:</label>
+            <input id="result-input" type="number" placeholder="Resultado" class="form-control">
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+  </main>
+
+  <footer>
+    <div class="container-fluid ">
+      <div class="row">
+        <div class="col-12">
+          <div class="bg-dark text-white px-2 py-4 mt-5">
+            <h6>© Espaço para o rodapé ™</h6>
+          </div>
+        </div>
+      </div>
+  </footer>
+  <script src="/assets/lib/bootstrap/js/bootstrap.min.js"></script>
+  <script type="module" src="/assets/js/main.js"></script>
+  
+  
+  
+  
+  
+  <!-- MODAL-->
+  <div id="modal-error" 
+  class="modal fade" 
+  data-bs-backdrop="static" 
+  data-bs-keyboard="false" 
+  tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-dark border-0">
+        <h5 class="modal-title text-white">Erro</h5>
+        <button type="button" class="btn btn-close1 text-white" data-bs-dismiss="modal" aria-label="Close">
+          <b>X</b>
+          </button>
+      </div>
+      <div class="modal-body bg-danger border-1">
+        <p class="text-white">texto do corpo do modal</p>
+      </div>
+      <div class="modal-footer bg-danger border-0">
+        <button type="button" class="btn btn-dark text-white" data-bs-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  
+  
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+:root{
+  --azul: #0000ff;
+  --branco: #ffffff;
+  --vermelho:#ff0000;
+  --verde:#00ff00;
+  
+  --space: 1rem;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: var(--azul);
+}
+
+*{
+  font-size: 1rem;
+  box-size: border-box;
+}
+
+
+.title{
+  text-align: center;
+}
+
+
+.bordertemp1 {
+  border: 1px solid #ff0000;
+}
+/*
+
+input[type=number], input[type=text]{
+  background-color: var(--branco);
+  border-radius: .25rem;
+}
+
+input[type=number]:hover {
+  border: 2px solid var(--azul)
+}
+*/
+
