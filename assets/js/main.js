@@ -37,20 +37,27 @@ btnResolver.addEventListener("click", resolverDivisao);
 btnReset.addEventListener("click", resetInputs);
 
 function resolver() {
-  console.log("resolver");
   let listNum = [];
   let numero = numInputA.value;
   listNum = gerarListImpar(numero);
   resultInput.value = listNum.length;
-  console.log(listNum);
 }
 
 function resolverDivisao() {
   const result = dividir(numInputA.value, numInputB.value);
+  const resultMsg = document.querySelector("#result .msg");
 
   if (result != null) {
     resultInput.value = result.quociente;
-    console.log(result);
+
+    if(result.resto!= ""){
+      resultMsg.classList.add("d-block");
+      resultMsg.classList.remove("d-none");
+      resultMsg.innerHTML = `O resto da divisão foi ${result.resto}`;
+    }else{
+      resultMsg.classList.add("d-none");
+      resultMsg.classList.remove("d-block");
+    }
   }
 
 }
@@ -88,8 +95,6 @@ function somaValores(listValores) {
 function haveRest(number, divPer) {
   return (number % divPer);
 }
-
-//console.log(dividir(3, 2));
 
 function dividir(divisor, dividendo) {
   const divisao = new Divisao(divisor, dividendo);

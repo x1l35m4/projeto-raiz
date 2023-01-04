@@ -29,8 +29,8 @@
         <div class="col-12">
           <div class="align-items-center justify-content-center">
 
-            <div class="input-number input-group bordertemp mb-3">
-              <label for="num-input-a" class="input-group-text">Número-A:</label>
+            <div id="dividendo" class="input-number input-group bordertemp mb-3">
+              <label for="num-input-a" class="input-group-text">Dividendo:</label>
               <input id="num-input-a" type="number" placeholder="Entre com dividendo" class="input-value form-control">
 
               <div class="msg text-danger w-100 d-none">
@@ -39,8 +39,8 @@
 
             </div>
 
-            <div class="input-number input-group bordertemp mb-3">
-              <label for="num-input-b" class="input-group-text">Número-B:</label>
+            <div id="divisor" class="input-number input-group bordertemp mb-3">
+              <label for="num-input-b" class="input-group-text">Divisor:</label>
               <input id="num-input-b" type="number" placeholder="Entre com divisor" class="input-value form-control">
 
               <div class="msg text-danger w-100 d-none">
@@ -48,7 +48,7 @@
               </div>
             </div>
 
-            <div class="row align-items-center justify-content-center">
+            <div id="bottons" class="row align-items-center justify-content-center">
               <div class="col-4 col-ms-3 mb-3 text-center bordertemp">
                 <button id="btn-resolver" class="btn btn-primary">Resolver</button>
               </div>
@@ -60,10 +60,13 @@
 
 
           </div>
-          <div class="input-group mb-3 bordertemp">
+          <div id="result" class="input-group mb-3 bordertemp">
             <label for="num-input-a" class="input-group-text">resultado:</label>
-            <input id="result-input" type="number" placeholder="Resultado" class="form-control">
+            <input id="result-input" disabled type="number" placeholder="Resultado" class="form-control bg-white">
+            <div class="msg text-danger w-100 d-none">
+            </div>
           </div>
+
 
         </div>
       </div>
