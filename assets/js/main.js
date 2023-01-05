@@ -2,9 +2,9 @@ console.log("main.js");
 
 import Divisao from '/assets/js/componets/divisao.js'
 
-const numInputA = document.querySelector("#num-input-a");
-const numInputB = document.querySelector("#num-input-b");
-const resultInput = document.querySelector("#result-input");
+const dividendo = document.querySelector("#dividendo");
+const divisor = document.querySelector("#divisor");
+const quociente = document.querySelector("#quociente");
 const btnResolver = document.querySelector("#btn-resolver")
 const btnReset = document.querySelector("#btn-reset");
 
@@ -44,17 +44,20 @@ function resolver() {
 }
 
 function resolverDivisao() {
+  const numInputA = dividendo.querySelector("input");
+  const numInputB = divisor.querySelector("input");
+
   const result = dividir(numInputA.value, numInputB.value);
-  const resultMsg = document.querySelector("#result .msg");
+  const resultMsg = document.querySelector("#quociente .msg");
 
   if (result != null) {
-    resultInput.value = result.quociente;
+    quociente.querySelector("#result-input").value = result.quociente;
 
-    if(result.resto!= ""){
+    if (result.resto != "") {
       resultMsg.classList.add("d-block");
       resultMsg.classList.remove("d-none");
-      resultMsg.innerHTML = `O resto da divisão foi ${result.resto}`;
-    }else{
+      resultMsg.innerHTML = `O resto da divisão é ${result.resto}`;
+    } else {
       resultMsg.classList.add("d-none");
       resultMsg.classList.remove("d-block");
     }
@@ -115,9 +118,13 @@ function dividir(divisor, dividendo) {
 
 
 function resetInputs() {
-  numInputA.value = "";
-  numInputB.value = "";
+  dividendo.querySelector("#num-input-a").value = "";
+  divisor.querySelector("#num-input-b").value = "";
   resultInput.value = "";
+
+  dividendo.querySelector(".msg").classList.add("d-none");
+  divisor.querySelector(".msg").classList.add("d-none");
+
 }
 
 function validInput(...list) {
